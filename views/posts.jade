@@ -1,0 +1,10 @@
+- for (var i=3; i<posts.length+3; i+=3)
+  .row
+    - for (var j=i-3; j<i&&j<posts.length;j++)
+      .col-xs-12.col-sm-6.col-md-4.col-lg-4
+        h2
+          a(href='/u/'+posts[j].user)= posts[j].user
+          | 说
+        p
+          small= posts[j].time
+        p= posts[j].post

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	if (!user)
+		.hero-unit
+			h1 欢迎来到Microsoft
+			p Microsoft 是一个基于Node.js的微博系统
+			p
+				a.btn.btn-primary.btn-large(href='/login') 登陆
+				a.btn.btn-large(href='/reg') 立即注册
+	else
+		include ./say.jade
+	include ./posts.jade
+
